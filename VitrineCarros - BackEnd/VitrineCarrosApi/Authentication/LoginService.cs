@@ -12,7 +12,7 @@ namespace VitrineCarrosApi.Authentication
             try
             {
 
-                SqlConnection connection = new SqlConnection(Connections.identidadeacesso);
+                SqlConnection connection = new SqlConnection(Connections.connection);
                 await connection.OpenAsync();
                 string sql = $"SELECT * FROM usuario";
                 var fato = await connection.QueryAsync<Usuario>(sql);
